@@ -17,5 +17,11 @@ int main(){
 	
 	return 0;
 }
-
-//Do not modify source code above this line
+void shuffle(int &x,int &y,int &z,int &k){
+	int a[4] = {x,y,z,k};
+	for(int i=0; i<4; i++){
+		int shu = rand()%4;
+		int temp = a[i];
+		a[i] = a[shu];
+		a[shu] = temp;
+	}
